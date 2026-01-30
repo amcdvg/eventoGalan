@@ -401,6 +401,12 @@
                     return;
                 }
 
+                // NUEVA VALIDACIÓN: No permitir enviar si referidos es igual a 0
+                if (referidosNum === 0) {
+                    showCustomAlert('Ingresar un numero de referidos válido. Por favor, ingresa un número mayor que 0.', 'warning');
+                    return;
+                }
+
                 // Validación del checkbox de autorización
                 const autorizacionCheckbox = document.getElementById('autorizacion');
                 if (!autorizacionCheckbox.checked) {
